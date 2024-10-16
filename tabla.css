@@ -4,44 +4,38 @@
     gap: 10px;
     align-items: flex-end;
     flex-wrap: wrap;
-    /* Alinea las columnas por abajo */
 }
 
+/* Sections 1, 2, and 5 are in columns */
 .seccion-1,
 .seccion-2 {
     display: flex;
     flex-direction: column;
 }
 
-/* Sección 3 con 4 filas */
-.seccion-3 .fila,
-.seccion-4 .fila,
-.seccion-5 {
+/* Sección 3 */
+.seccion-3 .fila {
     display: flex;
 }
 
-/* Colores por sección */
+/* Responsive colors */
 .seccion-1 .elemento {
     background-color: #F7CAAC;
 }
-
 .seccion-2 .elemento {
     background-color: #FFE599;
 }
-
 .seccion-3 .elemento {
     background-color: #FFFF00;
 }
-
 .seccion-4 .elemento {
     background-color: #8EAADB;
 }
-
 .seccion-5 .elemento {
     background-color: #68FB61;
 }
 
-/* Estilo básico de las celdas de la tabla */
+/* Base styles for elements */
 .elemento {
     width: 50px;
     height: 50px;
@@ -50,43 +44,45 @@
     border: 1px solid #000;
     margin: 5px;
     transition: background-color 0.3s;
-
 }
 
-/* Efecto hover */
-.elemento:hover, .elementoA:hover {
+/* Hover effect */
+.elemento:hover,
+.elementoA:hover {
     background-color: #031FA2;
     color: white;
 }
 
-/* Diseño responsivo */
-@media (max-width: 600px) {
+/* Responsive Design */
+@media (max-width: 600px) and (orientation: portrait) {
     .columnas {
         flex-direction: column;
-        align-items: flex-start;
-        /* Volver a la alineación normal en pantallas pequeñas */
-        flex: 1 1 45%; /* Default: 3 elements per row */
-
     }
-
-    .elementoA {
-        flex: 1 1 45%; /* 2 elements per row */
-                        
-                                                           
+    .seccion-1, .seccion-2, .seccion-3, .seccion-4, .seccion-5 {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-
-    .vertical-column {
+    .elemento, .elementoA {
         flex: 1 1 45%;
     }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
-
-    .seccion-1,
-    .seccion-2,
-    .seccion-3 {
-        display: flex;
+    .seccion-1, .seccion-2 {
         flex-direction: row;
+    }
+    .seccion-3 {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .seccion-3 .fila {
+        flex-wrap: wrap;
+    }
+    .seccion-3 .elemento {
+        flex: 1 1 18%;
+    }
+    .seccion-4, .seccion-5, .vertical-column {
+        flex-direction: column;
     }
 
     .elemento:hover, .elementoA:hover {
@@ -95,69 +91,51 @@
     }
 }
 
-/* Más de 801px: no hay cambios */
+@media (min-width: 801px) {
+    /* Default large screen behavior */
+}
 
- body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-									   
-        }
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .elementoA {
-            padding: 20px;
-            margin: 5px;
-            text-align: center;
-            border: 1px solid #000;
-            flex: 1 1 30%; /* Default: 3 elements per row */
-        }
+.elementoA {
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid #000;
+    flex: 1 1 30%;
+}
 
-        .elementoBlanco {
-            padding: 20px;
-            margin: 5px;
-            text-align: center;
-            flex: 1 1 30%; /* Default: 3 elements per row */
-        }
+.elementoBlanco {
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    flex: 1 1 30%;
+}
 
-        .light-purple {
-            background-color: #ddabff;
-        }
+.light-purple {
+    background-color: #ddabff;
+}
 
-        .blanco {
-            background-color: #ffffff;
-        }
+.blanco {
+    background-color: #ffffff;
+}
 
-        .magenta {
-            background-color: #ff66ff;
-        }
+.magenta {
+    background-color: #ff66ff;
+}
 
-        .cyan {
-            background-color: #00ccff;	
-									  
-        }
+.cyan {
+    background-color: #00ccff;
+}
 
-        /* Vertically align "He" and "F" columns */
-        .vertical-column {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-        }
-
-        /* Up to 600px width: 2 columns */
-
-        /* Between 601px and 800px: Light purple spans full width */
-        /* @media (min-width: 601px) and (max-width: 800px) {*/
-          /*   .light-purple {
-                flex: 1 1 100%; /* Spans full width */
-         /*    }
-            .magenta, .cyan {
-                flex: 1 1 45%; /* Magenta and cyan: 2 elements per row */
-         /*    }*/
-        /* }*/
-					 
-	 
- 
-
-								   
+.vertical-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
