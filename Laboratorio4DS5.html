@@ -1,1 +1,143 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Periodic Table with Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .table-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .element {
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+            border: 1px solid #000;
+            flex: 1 1 30%; /* Default: 3 elements per row */
+        }
+
+        .elementoBlanco {
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+            flex: 1 1 30%; /* Default: 3 elements per row */
+        }
+
+        .light-purple {
+            background-color: #e1ccec;
+        }
+
+        .blanco {
+            background-color: #ffffff;
+        }
+
+        .magenta {
+            background-color: #ff77ff;
+        }
+
+        .cyan {
+            background-color: #8fe7ff;
+        }
+
+        /* Vertically align "He" and "F" columns */
+        .vertical-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Up to 600px width: 2 columns */
+        @media (max-width: 600px) {
+            .element {
+                flex: 1 1 45%; /* 2 elements per row */
+            }
+            .vertical-column {
+                flex: 1 1 45%;
+            }
+        }
+
+        /* Between 601px and 800px: Light purple spans full width */
+        /* @media (min-width: 601px) and (max-width: 800px) {*/
+          /*   .light-purple {
+                flex: 1 1 100%; /* Spans full width */
+         /*    }
+            .magenta, .cyan {
+                flex: 1 1 45%; /* Magenta and cyan: 2 elements per row */
+         /*    }*/
+        /* }*/
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <!-- Light Purple Section -->
+        <div class="vertical-column">
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="element light-purple">C</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+        </div>
+
+        <div class="vertical-column">
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="element light-purple">N</div>
+            <div class="element light-purple">P</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+        </div>
+
+        <div class="vertical-column">
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="element light-purple">O</div>
+            <div class="element light-purple">S</div>
+            <div class="element light-purple">Se</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="elementoBlanco blanco">Blanco</div>
+        </div>
+
+        <!-- Magenta Section -->
+        <div class="vertical-column">
+            <div class="elementoBlanco blanco">Blanco</div>
+            <div class="element magenta">F</div>
+            <div class="element magenta">Cl</div>
+            <div class="element magenta">Br</div>
+            <div class="element magenta">I</div>
+            <div class="element magenta">At</div>
+            <div class="element magenta">Ts</div>
+        </div>
+
+        <!-- Vertical column with He -->
+        <div class="vertical-column">
+            <div class="element cyan">He</div>
+            <div class="element cyan">Ne</div>
+            <div class="element cyan">Ar</div>
+            <div class="element cyan">Kr</div>
+            <div class="element cyan">Xe</div>
+            <div class="element cyan">Rn</div>
+            <div class="element cyan">Og</div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
