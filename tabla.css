@@ -3,11 +3,11 @@
     display: flex;
     gap: 10px;
     align-items: flex-end;
-    flex: 1 1 30%; /* Default: 3 elements per row */
+    flex-wrap: wrap;
 
-    /* Alinea las columnas por abajo */
 }
 
+/* Sections 1, 2, and 5 are in columns */
 .seccion-1,
 .seccion-2 {
     display: flex;
@@ -16,48 +16,43 @@
 
 }
 
-/* Sección 3 con 4 filas */
-.seccion-3 .fila,
-.seccion-4 .fila,
-.seccion-5 {
+/* Sección 3 */
+.seccion-3 .columna {
     display: flex;
-    flex: 1 1 30%; /* Default: 3 elements per row */
+    flex-direction: column;
+
 
 }
 
-/* Colores por sección */
+/* Responsive colors */
 .seccion-1 .elemento {
     background-color: #F7CAAC;
     flex: 1 1 30%; /* Default: 3 elements per row */
 
 }
-
 .seccion-2 .elemento {
     background-color: #FFE599;
     flex: 1 1 30%; /* Default: 3 elements per row */
 
 }
-
-.seccion-3 .elemento {
+.elemento3 {
     background-color: #FFFF00;
     flex: 1 1 30%; /* Default: 3 elements per row */
 
 }
-
-.seccion-4 .elemento {
+.elemento4 {
     background-color: #8EAADB;
     flex: 1 1 30%; /* Default: 3 elements per row */
 
 }
-
-.seccion-5 .elemento {
+ .elemento5 {
     background-color: #68FB61;
     flex: 1 1 30%; /* Default: 3 elements per row */
 
 }
 
-/* Estilo básico de las celdas de la tabla */
-.elemento {
+/* Base styles for elements */
+.elemento, .elemento3, .elemento4, .elemento5 {
     width: 50px;
     height: 50px;
     text-align: center;
@@ -69,112 +64,103 @@
 
 }
 
-/* Efecto hover */
-.elemento:hover, .elementoA:hover {
+/* Hover effect */
+.elemento:hover,
+.elementoA:hover, 
+.elemento3:hover,
+.elemento4:hover,
+.elemento5:hover {
+
     background-color: #031FA2;
     color: white;
 }
 
-/* Diseño responsivo */
-@media (max-width: 600px) {
+/* Responsive Design */
+@media (max-width: 600px) and (orientation: portrait) {
     .columnas {
         flex-direction: column;
-        align-items: flex-start;
-        /* Volver a la alineación normal en pantallas pequeñas */
-        flex: 1 1 45%; /* Default: 3 elements per row */
-
     }
-
-    .elementoA {
-        flex: 1 1 45%; /* 2 elements per row */
-                        
-                                                           
+    .seccion-1, .seccion-2, .seccion-3, .seccion-4, .seccion-5, .elemento4, .elemento5 {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
+    .elemento, .elementoA {
 
-    .vertical-column {
         flex: 1 1 45%;
     }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
-
-    .seccion-1,
-    .seccion-2,
-    .seccion-3 {
-        display: flex;
+    .seccion-1, .seccion-2 {
         flex-direction: row;
     }
+    .seccion-3 {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .seccion-3 .columna {
+        flex-wrap: wrap;
+    }
+    .seccion-3 .elemento {
+        flex: 1 1 18%;
+    }
+    .seccion-4, .seccion-5, .elemento4, .elemento5, .vertical-column {
+        flex-direction: column;
+    }
 
-    .elemento:hover, .elementoA:hover {
+    .elemento:hover,
+    .elementoA:hover, 
+    .elemento3:hover,
+    .elemento4:hover,
+    .elemento5:hover {
+
         background-color: #C11905;
         color: white;
     }
 }
 
-/* Más de 801px: no hay cambios */
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-									   
-        }
+.elementoA {
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid #000;
+    flex: 1 1 30%;
+}
 
-        .elementoA {
-            padding: 20px;
-            margin: 5px;
-            text-align: center;
-            border: 1px solid #000;
-            flex: 1 1 30%; /* Default: 3 elements per row */
-        }
+.elementoBlanco {
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    flex: 1 1 30%;
+}
 
-        .elementoBlanco {
-            padding: 20px;
-            margin: 5px;
-            text-align: center;
-            flex: 1 1 30%; /* Default: 3 elements per row */
-        }
+.light-purple {
+    background-color: #ddabff;
+}
 
-        .light-purple {
-            background-color: #e1ccec;
-        }
+.blanco {
+    background-color: #ffffff;
+}
 
-        .blanco {
-            background-color: #ffffff;
-        }
+.magenta {
+    background-color: #ff66ff;
+}
 
-        .magenta {
-            background-color: #ff77ff;
-        }
+.cyan {
+    background-color: #00ccff;
+}
 
-        .cyan {
-            background-color: #8fe7ff;	
-									  
-        }
+.vertical-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        /* Vertically align "He" and "F" columns */
-        .vertical-column {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex: 1 1 45%; /* Default: 3 elements per row */
-
-        }
-
-        /* Up to 600px width: 2 columns */
-
-        /* Between 601px and 800px: Light purple spans full width */
-        /* @media (min-width: 601px) and (max-width: 800px) {*/
-          /*   .light-purple {
-                flex: 1 1 100%; /* Spans full width */
-         /*    }
-            .magenta, .cyan {
-                flex: 1 1 45%; /* Magenta and cyan: 2 elements per row */
-         /*    }*/
-        /* }*/
-					 
-	 
- 
-
-								   
