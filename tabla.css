@@ -3,6 +3,8 @@
     display: flex;
     gap: 10px;
     align-items: flex-end;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
     /* Alinea las columnas por abajo */
 }
 
@@ -10,6 +12,8 @@
 .seccion-2 {
     display: flex;
     flex-direction: column;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
 }
 
 /* Sección 3 con 4 filas */
@@ -17,27 +21,39 @@
 .seccion-4 .fila,
 .seccion-5 {
     display: flex;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
 }
 
 /* Colores por sección */
 .seccion-1 .elemento {
     background-color: #F7CAAC;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
 }
 
 .seccion-2 .elemento {
     background-color: #FFE599;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
 }
 
 .seccion-3 .elemento {
     background-color: #FFFF00;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
 }
 
 .seccion-4 .elemento {
     background-color: #8EAADB;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
 }
 
 .seccion-5 .elemento {
     background-color: #68FB61;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
 }
 
 /* Estilo básico de las celdas de la tabla */
@@ -49,6 +65,8 @@
     border: 1px solid #000;
     margin: 5px;
     transition: background-color 0.3s;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
 }
 
 /* Efecto hover */
@@ -63,6 +81,8 @@
         flex-direction: column;
         align-items: flex-start;
         /* Volver a la alineación normal en pantallas pequeñas */
+        flex: 1 1 45%; /* Default: 3 elements per row */
+
     }
 
     .elementoA {
@@ -99,14 +119,6 @@
             padding: 0;
             box-sizing: border-box;
 									   
-        }
-
-        .table-container {
-			
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: 0 auto;
         }
 
         .elementoA {
@@ -146,6 +158,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            flex: 1 1 45%; /* Default: 3 elements per row */
+
         }
 
         /* Up to 600px width: 2 columns */
