@@ -1,0 +1,71 @@
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .table-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .element {
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+            border: 1px solid #000;
+            flex: 1 1 30%; /* Default: 3 elements per row */
+        }
+
+        .elementoBlanco {
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+            flex: 1 1 30%; /* Default: 3 elements per row */
+        }
+
+        .light-purple {
+            background-color: #e1ccec;
+        }
+
+        .blanco {
+            background-color: #ffffff;
+        }
+
+        .magenta {
+            background-color: #ff77ff;
+        }
+
+        .cyan {
+            background-color: #8fe7ff;
+        }
+
+        /* Vertically align "He" and "F" columns */
+        .vertical-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Up to 600px width: 2 columns */
+        @media (max-width: 600px) {
+            .element {
+                flex: 1 1 45%; /* 2 elements per row */
+            }
+            .vertical-column {
+                flex: 1 1 45%;
+            }
+        }
+
+        /* Between 601px and 800px: Light purple spans full width */
+        /* @media (min-width: 601px) and (max-width: 800px) {*/
+          /*   .light-purple {
+                flex: 1 1 100%; /* Spans full width */
+         /*    }
+            .magenta, .cyan {
+                flex: 1 1 45%; /* Magenta and cyan: 2 elements per row */
+         /*    }*/
+        /* }*/
