@@ -1,0 +1,167 @@
+/* Diseño en columnas */
+.columnas {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    /* Alinea las columnas por abajo */
+}
+
+.seccion-1,
+.seccion-2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* Sección 3 con 4 filas */
+.seccion-3 .fila,
+.seccion-4 .fila,
+.seccion-5 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Colores por sección */
+.seccion-1 .elemento {
+    background-color: #F7CAAC;
+}
+
+.seccion-2 .elemento {
+    background-color: #FFE599;
+}
+
+.seccion-3 .elemento {
+    background-color: #FFFF00;
+}
+
+.seccion-4 .elemento {
+    background-color: #8EAADB;
+}
+
+.seccion-5 .elemento {
+    background-color: #68FB61;
+}
+
+/* Estilo básico de las celdas de la tabla */
+.elemento {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #000;
+    margin: 5px;
+    transition: background-color 0.3s;
+    flex: 1 1 30%; /* Default: 3 elements per row */
+
+}
+
+/* Efecto hover */
+.elemento:hover, .elementoA:hover {
+    background-color: #031FA2;
+    color: white;
+}
+
+/* Diseño responsivo */
+@media (max-width: 600px) {
+    .columnas {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Volver a la alineación normal en pantallas pequeñas */
+        flex: 1 1 45%; /* Default: 3 elements per row */
+
+    }
+
+    .elementoA {
+        flex: 1 1 45%; /* 2 elements per row */
+                        
+                                                           
+    }
+
+    .vertical-column {
+        flex: 1 1 45%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+    .seccion-1,
+    .seccion-2,
+    .seccion-3 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .elemento:hover, .elementoA:hover {
+        background-color: #C11905;
+        color: white;
+    }
+}
+
+/* Más de 801px: no hay cambios */
+
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+									   
+        }
+
+        .elementoA {
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+            border: 1px solid #000;
+            flex: 1 1 30%; /* Default: 3 elements per row */
+        }
+
+        .elementoBlanco {
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+            flex: 1 1 30%; /* Default: 3 elements per row */
+        }
+
+        .light-purple {
+            background-color: #e1ccec;
+        }
+
+        .blanco {
+            background-color: #ffffff;
+        }
+
+        .magenta {
+            background-color: #ff77ff;
+        }
+
+        .cyan {
+            background-color: #8fe7ff;	
+									  
+        }
+
+        /* Vertically align "He" and "F" columns */
+        .vertical-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1 1 45%; /* Default: 3 elements per row */
+
+        }
+
+        /* Up to 600px width: 2 columns */
+
+        /* Between 601px and 800px: Light purple spans full width */
+        /* @media (min-width: 601px) and (max-width: 800px) {*/
+          /*   .light-purple {
+                flex: 1 1 100%; /* Spans full width */
+         /*    }
+            .magenta, .cyan {
+                flex: 1 1 45%; /* Magenta and cyan: 2 elements per row */
+         /*    }*/
+        /* }*/
+					 
+	 
+ 
+
+								   
