@@ -20,6 +20,11 @@
             flex: 1 1 30%; /* Default: 3 elements per row */
         }
 
+        .elemento:hover {
+            background-color: #031FA2;
+            color: white;
+        }       
+
         .elementoBlanco {
             padding: 20px;
             margin: 5px;
@@ -55,6 +60,7 @@
             .elemento {
                 flex: 1 1 45%; /* 2 elements per row */
             }
+
             .vertical-column {
                 flex: 1 1 45%;
             }
