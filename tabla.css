@@ -64,6 +64,16 @@
         align-items: flex-start;
         /* Volver a la alineación normal en pantallas pequeñas */
     }
+
+    .elementoA {
+        flex: 1 1 45%; /* 2 elements per row */
+                        
+                                                           
+    }
+
+    .vertical-column {
+        flex: 1 1 45%;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -99,7 +109,7 @@
             margin: 0 auto;
         }
 
-        .elemento {
+        .elementoA {
             padding: 20px;
             margin: 5px;
             text-align: center;
@@ -152,16 +162,7 @@
 
         /* Up to 600px width: 2 columns */
         @media (max-width: 600px) {
-            .elemento {
-                flex: 1 1 45%; /* 2 elements per row */
-								
-																   
-            }
- 
-
-            .vertical-column {
-                flex: 1 1 45%;
-            }
+            
         }
 
         /* Between 601px and 800px: Light purple spans full width */
