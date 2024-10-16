@@ -12,7 +12,7 @@
             margin: 0 auto;
         }
 
-        .element {
+        .elemento {
             padding: 20px;
             margin: 5px;
             text-align: center;
@@ -52,7 +52,7 @@
 
         /* Up to 600px width: 2 columns */
         @media (max-width: 600px) {
-            .element {
+            .elemento {
                 flex: 1 1 45%; /* 2 elements per row */
             }
             .vertical-column {
