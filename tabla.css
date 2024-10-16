@@ -142,7 +142,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            flex: 1 1 45%; /* Default: 3 elements per row */
 
         }
 
