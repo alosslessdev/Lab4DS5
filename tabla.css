@@ -4,7 +4,6 @@
     gap: 10px;
     align-items: flex-end;
     flex-wrap: wrap;
-
 }
 
 /* Sections 1, 2, and 5 are in columns */
@@ -12,8 +11,6 @@
 .seccion-2 {
     display: flex;
     flex-direction: column;
-    flex: 1 1 30%; /* Default: 3 elements per row */
-
 }
 
 /* Sección 3 */
@@ -21,34 +18,23 @@
     display: flex;
     flex-direction: column;
 
-
 }
 
 /* Responsive colors */
 .seccion-1 .elemento {
     background-color: #F7CAAC;
-    flex: 1 1 30%; /* Default: 3 elements per row */
-
 }
 .seccion-2 .elemento {
     background-color: #FFE599;
-    flex: 1 1 30%; /* Default: 3 elements per row */
-
 }
 .elemento3 {
     background-color: #FFFF00;
-    flex: 1 1 30%; /* Default: 3 elements per row */
-
 }
 .elemento4 {
     background-color: #8EAADB;
-    flex: 1 1 30%; /* Default: 3 elements per row */
-
 }
  .elemento5 {
     background-color: #68FB61;
-    flex: 1 1 30%; /* Default: 3 elements per row */
-
 }
 
 /* Base styles for elements */
@@ -60,8 +46,6 @@
     border: 1px solid #000;
     margin: 5px;
     transition: background-color 0.3s;
-    flex: 1 1 30%; /* Default: 3 elements per row */
-
 }
 
 /* Hover effect */
@@ -70,7 +54,6 @@
 .elemento3:hover,
 .elemento4:hover,
 .elemento5:hover {
-
     background-color: #031FA2;
     color: white;
 }
@@ -85,7 +68,6 @@
         flex-wrap: wrap;
     }
     .elemento, .elementoA {
-
         flex: 1 1 45%;
     }
 }
@@ -113,10 +95,13 @@
     .elemento3:hover,
     .elemento4:hover,
     .elemento5:hover {
-
         background-color: #C11905;
         color: white;
     }
+}
+
+@media (min-width: 801px) {
+    /* Default large screen behavior */
 }
 
 /* General styling */
@@ -163,4 +148,3 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
