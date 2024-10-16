@@ -82,6 +82,11 @@ body {
     .columna {
         grid-column: span 1;
     }
+
+    .elemento:hover, .elemento3:hover, .elemento4:hover, .elemento5:hover, .elementoA:hover {
+        background-color: #C11905;
+        color: white;
+    }
 }
 
 /* For screens larger than 800px (default behavior) */
