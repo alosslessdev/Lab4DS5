@@ -8,7 +8,7 @@ body {
 
 .VariasColumnas {
     display: grid;
-    gap: 10px;
+    gap: 1px;
 }
 
 .elemento, .elemento3, .elemento4, .elemento5, .elementoA {
@@ -71,7 +71,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
     .seccion-1, .seccion-2, .columnaVertical, .columna {
-        grid-column: span 2;
+        grid-column: span 1;
     }
 }
 
