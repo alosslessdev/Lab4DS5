@@ -1,26 +1,36 @@
-/* Diseño en columnas */
-.columnas {
-    display: flex;
-    gap: 10px;
-    align-items: flex-end;
-    flex-wrap: wrap;
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Sections 1, 2, and 5 are in columns */
-.seccion-1,
-.seccion-2 {
-    display: flex;
-    flex-direction: column;
+.VariasColumnas {
+    display: grid;
+    gap: 1px;
 }
 
-/* Sección 3 */
-.seccion-3 .columna {
-    display: flex;
-    flex-direction: column;
-
+.elemento, .elemento3, .elemento4, .elemento5, .elementoA {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #000;
+    transition: background-color 0.3s;
+    margin: 5px;
 }
 
-/* Responsive colors */
+.elementoBlanco {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+/* Color schemes for different sections */
 .seccion-1 .elemento {
     background-color: #F7CAAC;
 }
@@ -33,118 +43,59 @@
 .elemento4 {
     background-color: #8EAADB;
 }
- .elemento5 {
+.elemento5 {
     background-color: #68FB61;
 }
 
-/* Base styles for elements */
-.elemento, .elemento3, .elemento4, .elemento5 {
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    border: 1px solid #000;
-    margin: 5px;
-    transition: background-color 0.3s;
+.morado {
+    background-color: #ddabff;
+}
+.blanco {
+    background-color: #ffffff;
+}
+.magenta {
+    background-color: #ff66ff;
+}
+.cyan {
+    background-color: #00ccff;
 }
 
-/* Hover effect */
-.elemento:hover,
-.elementoA:hover, 
-.elemento3:hover,
-.elemento4:hover,
-.elemento5:hover {
+.elemento:hover, .elemento3:hover, .elemento4:hover, .elemento5:hover, .elementoA:hover {
     background-color: #031FA2;
     color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) and (orientation: portrait) {
-    .columnas {
-        flex-direction: column;
+
+@media (max-width: 600px) {
+    .VariasColumnas {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .seccion-1, .seccion-2, .seccion-3, .seccion-4, .seccion-5, .elemento4, .elemento5 {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .elemento, .elementoA {
-        flex: 1 1 45%;
+    .seccion-1, .seccion-2, .columnaVertical, .columna {
+        grid-column: span 1;
     }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
-    .seccion-1, .seccion-2 {
+    .VariasColumnas {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .seccion-1, .seccion-2, .columnaVertical {
+        grid-column: span 5;
+        display: flex;
         flex-direction: row;
     }
-    .seccion-3 {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .seccion-3 .columna {
-        flex-wrap: wrap;
-    }
-    .seccion-3 .elemento {
-        flex: 1 1 18%;
-    }
-    .seccion-4, .seccion-5, .elemento4, .elemento5, .vertical-column {
-        flex-direction: column;
+    .columna {
+        grid-column: span 1;
     }
 
-    .elemento:hover,
-    .elementoA:hover, 
-    .elemento3:hover,
-    .elemento4:hover,
-    .elemento5:hover {
+    .elemento:hover, .elemento3:hover, .elemento4:hover, .elemento5:hover, .elementoA:hover {
         background-color: #C11905;
         color: white;
     }
 }
 
 @media (min-width: 801px) {
-    /* Default large screen behavior */
-}
-
-/* General styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.elementoA {
-    padding: 20px;
-    margin: 5px;
-    text-align: center;
-    border: 1px solid #000;
-    flex: 1 1 30%;
-}
-
-.elementoBlanco {
-    padding: 20px;
-    margin: 5px;
-    text-align: center;
-    flex: 1 1 30%;
-}
-
-.light-purple {
-    background-color: #ddabff;
-}
-
-.blanco {
-    background-color: #ffffff;
-}
-
-.magenta {
-    background-color: #ff66ff;
-}
-
-.cyan {
-    background-color: #00ccff;
-}
-
-.vertical-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    .VariasColumnas {
+        grid-template-columns: repeat(18, 1fr);
+    }
 }
