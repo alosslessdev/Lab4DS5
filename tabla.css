@@ -32,18 +32,7 @@ body {
     gap: 1px;
 }
 
-.noRectangular{
-    display: grid;
-    gap: 1px;
-    grid-template-areas:
-    'elementosVerdesColumna1C elementosMoradosColumna1C elementosMoradosColumna2C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
-    'elementosVerdesColumna1C elementosMoradosColumna1C elementosMoradosColumna2C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
-    'elementosAzulesOscurosColumna1C elementosVerdesColumna2C elementosMoradosColumna2C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
-    'elementosAzulesOscurosColumna1C elementosVerdesColumna2C elementosVerdesColumna3C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
-    'elementosAzulesOscurosColumna1C elementosAzulesOscurosColumna2C elementosVerdesColumna4C columnaVertical1C columnaVertical2C'
-    'elementosAzulesOscurosColumna1C elementosAzulesOscurosColumna2C elementosAzulesOscurosColumna3C elementosVerdesColumna4C columnaVertical1C columnaVertical2C'
-    'elementosAzulesOscurosColumna1C elementosAzulesOscurosColumna2C elementosAzulesOscurosColumna3C elementosAzulesOscurosColumna4C columnaVertical1C columnaVertical2C';
-}
+
 
 .TablaPeriodica {
     display: grid;
