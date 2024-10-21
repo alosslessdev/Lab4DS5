@@ -1,23 +1,23 @@
 /* General styling */
 
 
-.elementosAzulesOscurosColumna1{grid-area: elementosAzulesOscurosColumna1;}
-.elementosAzulesOscurosColumna2{grid-area: elementosAzulesOscurosColumna2;}
-.elementosAzulesOscurosColumna3{grid-area: elementosAzulesOscurosColumna3;}
-.elementosAzulesOscurosColumna4{grid-area: elementosAzulesOscurosColumna4;}
+.elementosAzulesOscurosColumna1{grid-area: elementosAzulesOscurosColumna1C;}
+.elementosAzulesOscurosColumna2{grid-area: elementosAzulesOscurosColumna2C;}
+.elementosAzulesOscurosColumna3{grid-area: elementosAzulesOscurosColumna3C;}
+.elementosAzulesOscurosColumna4{grid-area: elementosAzulesOscurosColumna4C;}
 
 
-.elementosVerdesColumna1{grid-area: elementosVerdesColumna1;}
-.elementosVerdesColumna2{grid-area: elementosVerdesColumna2;}
-.elementosVerdesColumna3{grid-area: elementosVerdesColumna3;}
-.elementosVerdesColumna4{grid-area: elementosVerdesColumna4;}
+.elementosVerdesColumna1{grid-area: elementosVerdesColumna1C;}
+.elementosVerdesColumna2{grid-area: elementosVerdesColumna2C;}
+.elementosVerdesColumna3{grid-area: elementosVerdesColumna3C;}
+.elementosVerdesColumna4{grid-area: elementosVerdesColumna4C;}
 
-.elementosMoradosColumna1{grid-area: elementosMoradosColumna1;}
-.elementosMoradosColumna2{grid-area: elementosMoradosColumna2;}
-.elementosMoradosColumna3{grid-area: elementosMoradosColumna3;}
+.elementosMoradosColumna1{grid-area: elementosMoradosColumna1C;}
+.elementosMoradosColumna2{grid-area: elementosMoradosColumna2C;}
+.elementosMoradosColumna3{grid-area: elementosMoradosColumna3C;}
 
-.columnaVertical1{grid-area: columnaVertical1;}
-.columnaVertical2{grid-area: columnaVertical2;}
+.columnaVertical1{grid-area: columnaVertical1C;}
+.columnaVertical2{grid-area: columnaVertical2C;}
 
 
 body {
@@ -35,13 +35,13 @@ body {
 .noRectangular{
 
     grid-template-areas:
-    'elementosVerdesColumna1 elementosMoradosColumna1 elementosMoradosColumna2 elementosMoradosColumna3 columnaVertical1 columnaVertical2'
-    'elementosVerdesColumna1 elementosMoradosColumna1 elementosMoradosColumna2 elementosMoradosColumna3 columnaVertical1 columnaVertical2'
-    'elementosAzulesOscurosColumna1 elementosVerdesColumna2 elementosMoradosColumna2 elementosMoradosColumna3  columnaVertical1 columnaVertical2'
-    'elementosAzulesOscurosColumna1 elementosVerdesColumna2 elementosVerdesColumna3 elementosMoradosColumna3 columnaVertical1 columnaVertical2'
-    'elementosAzulesOscurosColumna1 elementosAzulesOscurosColumna2 elementosVerdesColumna4 columnaVertical1 columnaVertical2'
-    'elementosAzulesOscurosColumna1 elementosAzulesOscurosColumna2 elementosAzulesOscurosColumna3 elementosVerdesColumna4 columnaVertical1 columnaVertical2'
-    'elementosAzulesOscurosColumna1 elementosAzulesOscurosColumna2 elementosAzulesOscurosColumna3 elementosAzulesOscurosColumna4 columnaVertical1 columnaVertical2';
+    'elementosVerdesColumna1C elementosMoradosColumna1C elementosMoradosColumna2C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
+    'elementosVerdesColumna1C elementosMoradosColumna1C elementosMoradosColumna2C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
+    'elementosAzulesOscurosColumna1C elementosVerdesColumna2C elementosMoradosColumna2C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
+    'elementosAzulesOscurosColumna1C elementosVerdesColumna2C elementosVerdesColumna3C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
+    'elementosAzulesOscurosColumna1C elementosAzulesOscurosColumna2C elementosVerdesColumna4C columnaVertical1C columnaVertical2C'
+    'elementosAzulesOscurosColumna1C elementosAzulesOscurosColumna2C elementosAzulesOscurosColumna3C elementosVerdesColumna4C columnaVertical1C columnaVertical2C'
+    'elementosAzulesOscurosColumna1C elementosAzulesOscurosColumna2C elementosAzulesOscurosColumna3C elementosAzulesOscurosColumna4C columnaVertical1C columnaVertical2C';
 }
 
 .TablaPeriodica {
