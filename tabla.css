@@ -6,9 +6,15 @@ body {
     box-sizing: border-box;
 }
 
-.VariasColumnas {
+.VariasColumnas, .noRectangular {
     display: grid;
     gap: 1px;
+}
+
+.TablaPeriodica {
+    display: grid;
+    grid-auto-columns: 800px;
+
 }
 
 .elemento, .elemento3, .elemento4, .elemento5, .elementoA {
@@ -95,7 +101,8 @@ body {
 }
 
 @media (min-width: 801px) {
-    .VariasColumnas {
-        grid-template-columns: repeat(18, 1fr);
+    .VariasColumnas, .noRectangular {
+        grid-template-columns: repeat(12, 1fr);
     }
+
 }
