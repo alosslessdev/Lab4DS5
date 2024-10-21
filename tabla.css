@@ -35,7 +35,6 @@ body {
 .noRectangular{
     display: grid;
     gap: 1px;
-
     grid-template-areas:
     'elementosVerdesColumna1C elementosMoradosColumna1C elementosMoradosColumna2C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
     'elementosVerdesColumna1C elementosMoradosColumna1C elementosMoradosColumna2C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
