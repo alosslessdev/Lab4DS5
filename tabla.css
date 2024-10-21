@@ -1,4 +1,25 @@
 /* General styling */
+
+
+.elementosAzulesOscurosColumna1{grid-area: elementosAzulesOscurosColumna1;}
+.elementosAzulesOscurosColumna2{grid-area: elementosAzulesOscurosColumna2;}
+.elementosAzulesOscurosColumna3{grid-area: elementosAzulesOscurosColumna3;}
+.elementosAzulesOscurosColumna4{grid-area: elementosAzulesOscurosColumna4;}
+
+
+.elementosVerdesColumna1{grid-area: elementosVerdesColumna1;}
+.elementosVerdesColumna2{grid-area: elementosVerdesColumna2;}
+.elementosVerdesColumna3{grid-area: elementosVerdesColumna3;}
+.elementosVerdesColumna4{grid-area: elementosVerdesColumna4;}
+
+.elementosMoradosColumna1{grid-area: elementosMoradosColumna1;}
+.elementosMoradosColumna2{grid-area: elementosMoradosColumna2;}
+.elementosMoradosColumna3{grid-area: elementosMoradosColumna3;}
+
+.columnaVertical1{grid-area: columnaVertical1;}
+.columnaVertical2{grid-area: columnaVertical2;}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,8 +33,15 @@ body {
 }
 
 .noRectangular{
-    grid-template-columns: auto auto auto auto auto auto;
 
+    grid-template-areas:
+    'elementosVerdesColumna1 elementosMoradosColumna1 elementosMoradosColumna2 elementosMoradosColumna3 columnaVertical1 columnaVertical2'
+    'elementosVerdesColumna1 elementosMoradosColumna1 elementosMoradosColumna2 elementosMoradosColumna3 columnaVertical1 columnaVertical2'
+    'elementosAzulesOscurosColumna1 elementosVerdesColumna2 elementosMoradosColumna2 elementosMoradosColumna3  columnaVertical1 columnaVertical2'
+    'elementosAzulesOscurosColumna1 elementosVerdesColumna2 elementosVerdesColumna3 elementosMoradosColumna3 columnaVertical1 columnaVertical2'
+    'elementosAzulesOscurosColumna1 elementosAzulesOscurosColumna2 elementosVerdesColumna4 columnaVertical1 columnaVertical2'
+    'elementosAzulesOscurosColumna1 elementosAzulesOscurosColumna2 elementosAzulesOscurosColumna3 elementosVerdesColumna4 columnaVertical1 columnaVertical2'
+    'elementosAzulesOscurosColumna1 elementosAzulesOscurosColumna2 elementosAzulesOscurosColumna3 elementosAzulesOscurosColumna4 columnaVertical1 columnaVertical2';
 }
 
 .TablaPeriodica {
@@ -21,8 +49,6 @@ body {
     grid-template-columns: auto auto;
 
 }
-
-
 
 .elemento, .elemento3, .elemento4, .elemento5, .elementoA {
     width: 50px;
@@ -60,18 +86,7 @@ body {
     background-color: #68FB61;
 }
 
-.morado {
-    background-color: #ddabff;
-}
-.blanco {
-    background-color: #ffffff;
-}
-.magenta {
-    background-color: #ff66ff;
-}
-.cyan {
-    background-color: #00ccff;
-}
+
 
 .elemento:hover, .elemento3:hover, .elemento4:hover, .elemento5:hover, .elementoA:hover {
     background-color: #031FA2;
