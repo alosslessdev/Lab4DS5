@@ -11,11 +11,19 @@ body {
     gap: 1px;
 }
 
-.TablaPeriodica {
-    display: grid;
-    grid-auto-columns: 800px;
+.noRectangular{
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
 
 }
+
+.TablaPeriodica {
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+
 
 .elemento, .elemento3, .elemento4, .elemento5, .elementoA {
     width: 50px;
@@ -101,7 +109,7 @@ body {
 }
 
 @media (min-width: 801px) {
-    .VariasColumnas, .noRectangular {
+    .VariasColumnas {
         grid-template-columns: repeat(12, 1fr);
     }
 
