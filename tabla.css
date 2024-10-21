@@ -27,12 +27,14 @@ body {
     box-sizing: border-box;
 }
 
-.VariasColumnas, .noRectangular {
+.VariasColumnas {
     display: grid;
     gap: 1px;
 }
 
 .noRectangular{
+    display: grid;
+    gap: 1px;
 
     grid-template-areas:
     'elementosVerdesColumna1C elementosMoradosColumna1C elementosMoradosColumna2C elementosMoradosColumna3C columnaVertical1C columnaVertical2C'
@@ -46,7 +48,7 @@ body {
 
 .TablaPeriodica {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-auto-columns: 800px;
 
 }
 
@@ -86,7 +88,18 @@ body {
     background-color: #68FB61;
 }
 
-
+.morado {
+    background-color: #ddabff;
+}
+.blanco {
+    background-color: #ffffff;
+}
+.magenta {
+    background-color: #ff66ff;
+}
+.cyan {
+    background-color: #00ccff;
+}
 
 .elemento:hover, .elemento3:hover, .elemento4:hover, .elemento5:hover, .elementoA:hover {
     background-color: #031FA2;
@@ -125,6 +138,7 @@ body {
 @media (min-width: 801px) {
     .VariasColumnas {
         grid-template-columns: repeat(12, 1fr);
+        width: 50%;
     }
 
 }
