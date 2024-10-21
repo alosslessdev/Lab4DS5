@@ -32,6 +32,11 @@ body {
     gap: 1px;
 }
 
+.noRectangular {
+    display: grid;
+    gap: 1px;
+    
+}
 
 
 .TablaPeriodica {
